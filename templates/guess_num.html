@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess number</title>
+</head>
+<body>
+<h1>Imagine a number between 1 and 1000</h1>
+<h2>Is your number: {{guessed_num}}?</h2>
+<form action="http://127.0.0.1:5000/" method="POST">
+    <input type="hidden" name="min" value="{{min}}">
+    <input type="hidden" name="max" value="{{max}}">
+    <input type="hidden" name="guess" value="{{guessed_num}}">
+    <label>
+        <button type="submit" value="too_small" name="user_answer">
+            Too small
+        </button>
+    </label>
+    <label>
+        <button type="submit" value="too_big" name="user_answer">
+            Too big
+        </button>
+    </label>
+    <label>
+        <button type="submit" value="correct" name="user_answer">
+            Correct
+        </button>
+    </label>
+
+
+</form>
+
+</body>
+</html>
